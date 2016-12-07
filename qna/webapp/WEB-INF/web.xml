@@ -4,6 +4,20 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>QnA</display-name>
+	
+	<!-- 모든 요청에 대해서 최초로 접근을 할 수 있도록 servlet을 설정한다 -->
+	<!-- spring 설정파일 로드 순서 -->
+	<!-- 최초 WebApplication이 실행될 때
+		WEB-INF아래에 있는 slipp-servlet.xml파일을 찾아서 spring mvc와 관련된 설정을 하게 된다.
+	-->
+	<servlet>
+		<servlet-name>slipp</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>slipp</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
