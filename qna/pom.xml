@@ -18,6 +18,7 @@
 				</configuration>
 			</plugin>
 			
+			<!-- wtp플러그인에 배포가 가능하도록 설정을 변경한다.(Dynamic Web Project..) 빌드를 하고 나면 프로젝트에 지구본 모양이 생긴다.-->
 			<plugin>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.9</version>
