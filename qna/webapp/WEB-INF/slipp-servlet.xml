@@ -21,6 +21,6 @@
 	
 	<!-- view 파일에 대한 설정(jsp를 접근할 때 설정방법) -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/"
+		p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp" />
 </beans>
