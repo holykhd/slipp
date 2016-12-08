@@ -14,6 +14,11 @@
 	<!-- controller를 추가할 때 annotation기반으로 지정하는 방법. -->
 	<mvc:annotation-driven />
 	
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/stylesheets/" mapping="/stylesheets/**" />
+	<mvc:resources location="/commons/" mapping="/commons/**" />
+	<mvc:resources location="/javascripts/" mapping="/javascripts/**" />
+	
 	<!-- view 파일에 대한 설정(jsp를 접근할 때 설정방법) -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/"
